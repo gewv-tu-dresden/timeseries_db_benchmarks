@@ -45,6 +45,14 @@ python-versions = ">=3.5.0"
 unicode_backport = ["unicodedata2"]
 
 [[package]]
+name = "ciso8601"
+version = "2.2.0"
+description = "Fast ISO8601 date time parser for Python written in C"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "click"
 version = "8.0.1"
 description = "Composable command line interface toolkit"
@@ -78,13 +86,14 @@ pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "gewv-timeseries-client"
-version = "0.5.0"
+version = "0.5.1"
 description = "Client to read and write data from our timeseries db."
 category = "main"
 optional = false
 python-versions = ">=3.7.1,<4.0.0"
 
 [package.dependencies]
+ciso8601 = ">=2.2.0,<3.0.0"
 influxdb-client = ">=1.16.0,<2.0.0"
 loguru = ">=0.5.1,<0.6.0"
 pandas = ">=1.2.4,<2.0.0"
@@ -325,7 +334,7 @@ dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "8c3d880f0c3191580a3a0e1c8521cc40d1749e0b4e67dd5e8edf0fb7e083ecf4"
+content-hash = "87da29f59cf2718ac90643f07fe6360e87c90cf1f112c4de37ba56a46648bad6"
 
 [metadata.files]
 black = [
@@ -340,6 +349,9 @@ charset-normalizer = [
     {file = "charset-normalizer-2.0.6.tar.gz", hash = "sha256:5ec46d183433dcbd0ab716f2d7f29d8dee50505b3fdb40c6b985c7c4f5a3591f"},
     {file = "charset_normalizer-2.0.6-py3-none-any.whl", hash = "sha256:5d209c0a931f215cee683b6445e2d77677e7e75e159f78def0db09d68fafcaa6"},
 ]
+ciso8601 = [
+    {file = "ciso8601-2.2.0.tar.gz", hash = "sha256:14ad817ed31a698372d42afa81b0173d71cd1d0b48b7499a2da2a01dcc8695e6"},
+]
 click = [
     {file = "click-8.0.1-py3-none-any.whl", hash = "sha256:fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6"},
     {file = "click-8.0.1.tar.gz", hash = "sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"},
@@ -353,8 +365,8 @@ flake8 = [
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
 ]
 gewv-timeseries-client = [
-    {file = "gewv-timeseries-client-0.5.0.tar.gz", hash = "sha256:bc6ceca0bfc28d8ecaef865e7b2afd69b64bd4e7d193e3d6e91c7c9eb53f852c"},
-    {file = "gewv_timeseries_client-0.5.0-py3-none-any.whl", hash = "sha256:922a88fa1ae017efbf080f8d6c54c838f684f6bd7c215547a361c918e2ebeae4"},
+    {file = "gewv-timeseries-client-0.5.1.tar.gz", hash = "sha256:bfa86c00012175da2ed2ee01e13e289a2aa65ca3f9a399365f3a54fc51bb8414"},
+    {file = "gewv_timeseries_client-0.5.1-py3-none-any.whl", hash = "sha256:6bfe56978e280cb57740fdb354dd50711206091ebc62e837cf5cba61091389b6"},
 ]
 idna = [
     {file = "idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a"},
