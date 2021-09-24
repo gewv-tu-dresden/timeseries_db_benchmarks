@@ -13,7 +13,7 @@ print(certifi.where())
 influx_client = TimeseriesClient.from_env_properties()
 
 BUCKET = os.getenv("BUCKET")
-TIME_START = "-90d"
+TIME_START = "-2y"
 TIME_END = ""
 DATALOGGER = "PI-OA-F023"
 DEVICE = "LA_S_A031"
@@ -51,7 +51,8 @@ def main():
 
     for row in res[2].records:
         logger.info(
-            f"Operation: {row.values['Label']} Execution Time: {row.values['MeanDuration']/10e9}s"
+            f"Operation: {row.values['Label']} Execution\
+            Time: {row.values['MeanDuration']/10e9}s"
         )
 
 
