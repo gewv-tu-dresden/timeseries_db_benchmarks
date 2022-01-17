@@ -45,6 +45,7 @@ def main():
 
     logger.info("Finish the query!")
     logger.info(f"Number of tables: {len(res)}")
+    logger.info(f"Number of rows: {len(res[0].records)}")
     logger.info(f"Time for request {end-start}s")
     logger.info(
         f"Total Execution time: {res[len(res)-2].records[0].values['TotalDuration']/10e9}s"
